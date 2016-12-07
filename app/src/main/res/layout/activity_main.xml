@@ -23,13 +23,46 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
         android:text="Name"
         android:ems="10"
         android:layout_marginTop="55dp"
-        android:id="@+id/editText"
+        android:id="@+id/Name"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:inputType="number" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:layout_below="@+id/Name"
+        android:layout_alignLeft="@+id/Name"
+        android:layout_alignStart="@+id/Name"
+        android:id="@+id/PhoneNumber"
+        android:text="Phone Number" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:layout_below="@+id/PhoneNumber"
+        android:layout_alignRight="@+id/PhoneNumber"
+        android:layout_alignEnd="@+id/PhoneNumber"
+        android:id="@+id/Email"
+        android:text="Email" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="Age"
+        android:ems="10"
+        android:layout_below="@+id/Email"
+        android:layout_alignLeft="@+id/Email"
+        android:layout_alignStart="@+id/Email"
+        android:id="@+id/Age" />
 
 
 </RelativeLayout>

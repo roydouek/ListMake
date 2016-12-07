@@ -42,11 +42,6 @@ public class MainActivity extends AppCompatActivity {
             return this.age;
         }
     }
-    public void getName(View view) {
-
-            TextView t = (TextView) findViewById(R.id.editText);
-            t.getText();
-    }
 }
 
 
