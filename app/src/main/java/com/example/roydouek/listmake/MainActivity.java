@@ -12,6 +12,36 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+    public class Details{
+        String name;
+        String phone;
+        int age;
+        String email;
+        //build activity
+        public Details(String name,String phone,int age,String email)
+        {
+            this.name = name;
+            this.phone = phone;
+            this.age = age;
+            this.email = email;
+        }
+        public String getName()
+        {
+            return this.name;
+        }
+        public String getPhone()
+        {
+            return this.phone;
+        }
+        public String getEmail()
+        {
+            return this.email;
+        }
+        public int getAge()
+        {
+            return this.age;
+        }
+    }
     public void getName(View view) {
 
             TextView t = (TextView) findViewById(R.id.editText);
