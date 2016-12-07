@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
             this.age = age;
             this.email = email;
         }
+
         public String getName()
         {
             return this.name;
@@ -40,6 +41,12 @@ public class MainActivity extends AppCompatActivity {
         public int getAge()
         {
             return this.age;
+        }
+
+        public void setAll(View view){
+            TextView setname = (TextView) findViewById(R.id.Name);
+            this.name = setname.toString();
+            setname.setText(this.name);
         }
     }
 }
