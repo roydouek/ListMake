@@ -12,9 +12,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public void sendMessage(View view) {
-        TextView t = (TextView) findViewById(R.id.editText);
-        t.setText("you clicked");
-    }
+    public void getName(View view) {
 
+            TextView t = (TextView) findViewById(R.id.editText);
+            t.getText();
+    }
 }
+
+
+
