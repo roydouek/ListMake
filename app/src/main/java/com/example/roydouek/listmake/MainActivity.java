@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -14,11 +16,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public class Details{
         String name;
-        String phone;
+        int phone;
         int age;
         String email;
         //build activity
-        public Details(String name,String phone,int age,String email)
+        public Details(String name,int phone,int age,String email)
         {
             this.name = name;
             this.phone = phone;
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         {
             return this.name;
         }
-        public String getPhone()
+        public int getPhone()
         {
             return this.phone;
         }
@@ -44,9 +46,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public void setAll(View view){
-            TextView setname = (TextView) findViewById(R.id.Name);
-            this.name = setname.toString();
-            setname.setText(this.name);
+            //input - name.
+            TextView setName = (TextView) findViewById(R.id.Name);
+            this.name = setName.getText().toString();
+            //input - email.
+            TextView setEmail = (TextView) findViewById(R.id.Email);
+            this.email = setEmail.getText().toString();
         }
     }
 }
