@@ -44,15 +44,40 @@ public class MainActivity extends AppCompatActivity {
         {
             return this.age;
         }
+    }
+    public void setAll(View view){
+        Details newcontact;
+        int phonenum;
+        int agenum;
+        TextView setName = (TextView) findViewById(R.id.Name);
+        TextView setEmail = (TextView) findViewById(R.id.Email);
+        TextView setPhone = (TextView) findViewById(R.id.PhoneNumber);
+        TextView setAge = (TextView) findViewById(R.id.Age);
+        String phone = setPhone.getText().toString();
+        String age = setPhone.getText().toString();
+        if (isNumeric(age)==false)
+            setAge.setHint("age - only numbers!");
 
-        public void setAll(View view){
-            //input - name.
-            TextView setName = (TextView) findViewById(R.id.Name);
-            this.name = setName.getText().toString();
-            //input - email.
-            TextView setEmail = (TextView) findViewById(R.id.Email);
-            this.email = setEmail.getText().toString();
+        if (isNumeric(phone)==false)
+            setPhone.setHint("phone - only numbers!");
+
+        if (isNumeric(phone)&&isNumeric(age)){
+            agenum = Integer.parseInt(age);
+            phonenum = Integer.parseInt(phone);
+            newcontact = new Details(setName.getText().toString(),phonenum,agenum,setEmail.getText().toString());}
+
+    }
+    public static boolean isNumeric(String str)
+    {
+        try
+        {
+            double d = Double.parseDouble(str);
         }
+        catch(NumberFormatException nfe)
+        {
+            return false;
+        }
+        return true;
     }
 }
 
