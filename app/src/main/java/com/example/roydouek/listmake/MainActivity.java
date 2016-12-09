@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
     public class Details{
         String name;
         int phone;
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             return this.age;
         }
     }
-    public void setAll(View view){
+    public void SetAll(View view){
         Details newcontact;
         int phonenum;
         int agenum;
@@ -61,10 +62,13 @@ public class MainActivity extends AppCompatActivity {
         if (isNumeric(phone)==false)
             setPhone.setHint("phone - only numbers!");
 
-        if (isNumeric(phone)&&isNumeric(age)){
+        if (isNumeric(phone)&&isNumeric(age)) {
             agenum = Integer.parseInt(age);
             phonenum = Integer.parseInt(phone);
-            newcontact = new Details(setName.getText().toString(),phonenum,agenum,setEmail.getText().toString());}
+            //create new contact
+            newcontact = new Details(setName.getText().toString(), phonenum, agenum, setEmail.getText().toString());
+            GetSetAll(newcontact);
+        }
 
     }
     public static boolean isNumeric(String str)
@@ -78,6 +82,10 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
         return true;
+    }
+    public static void GetSetAll(Details collector)
+    {
+        Main2Activity.GetDetails(collector);
     }
 }
 

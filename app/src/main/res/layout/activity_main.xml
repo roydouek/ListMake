@@ -11,14 +11,14 @@
     tools:context="com.example.roydouek.listmake.MainActivity">
 
     <Button
-        android:text="add one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="7dp"
-        android:onClick="setAll" />
+    android:text="add one"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/button2"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="7dp"
+    android:onClick="setAll" />
 
     <EditText
         android:layout_width="wrap_content"
