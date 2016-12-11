@@ -14,12 +14,12 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
     }
-    static int count = 1;
+    static int count = 0;
     public static void GetDetails(MainActivity.Details collector2)
     {
         Map<String , MainActivity.Details[]> kMap = new HashMap<String, MainActivity.Details[]>();
         String nameGiver = "item" + count;
         kMap.put (nameGiver,new MainActivity.Details[count]);
-
+        count++;
     }
 }
